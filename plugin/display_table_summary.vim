@@ -1,7 +1,6 @@
 " Display Table Name for current Rails model file
 
 function! s:DisplayTableSummary() abort
-  echom s:table_info_query()
   call popup_create(systemlist(s:table_info_query()), s:popup_options)
 endfunction
 
