@@ -20,6 +20,11 @@ nnoremap <leader>dt :DisplayTableSummary<cr>
 
 Installation
 ------------
+
+*Note* This plugin requires Vim version 8.2+ as it makes use of the `popup`
+windows that were added in that version. This plugin does not currently support
+Neovim.
+
 If you don't have a preferred installation method, I recommend using [VimPlug](https://github.com/junegunn/vim-plug).
 Assuming you have vim-plug installed and configured, the following steps will
 install the plugin:
@@ -46,3 +51,12 @@ git clone git@github.com:christoomey/display-table-summary.git ~/.vim/pack/plugi
 
 Database Name
 -------------
+
+The plugin has three approaches to determine the database name:
+
+1. You can directly specify it in your vimrc, e.g. `let
+   g:display_table_database_name = 'my_db_name'`. This option will supersede
+   others, but is intended as a fallback.
+2. If [`yq`](https://github.com/mikefarah/yq) is installed, it will use that to
+   parse the `config/database.yml` to read the development database name.L
+3. It will try to infer the DB name based on the directory name.
