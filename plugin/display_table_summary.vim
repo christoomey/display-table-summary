@@ -20,7 +20,7 @@ function! s:table_info_query() abort
 endfunction
 
 function! s:table_name() abort
-  return trim(system(s:plugin_root . "/bin/table-name-rails  . expand("%")))
+  return trim(system(s:plugin_root . "/bin/table-name-rails "  . expand("%")))
 endfunction
 
 function! s:database_name() abort
