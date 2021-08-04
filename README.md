@@ -4,6 +4,8 @@ Display Table Summary
 This plugin provides a very thin wrapper around Postgres' psql `\d` command to
 view the details of a database table.
 
+![Demo video](./demo.gif)
+
 Usage
 -----
 
